@@ -1,0 +1,95 @@
+명령 프롬프트에서 python을 실행하다가 Desktop주소로 가려면
+exit()을 입력하면 됨
+
+
+-list
+a=[1, 2, 3, '변수']
+a[0]=1 a[2]=3
+
+a.append(3)
+list a의 마지막에 3을 추가함
+
+int('숫자') >> '숫자'라는 문자열이 정수로 변환됨
+input('>>>') >> 문자열을 입력받음 C의 scanf와 비슷함
+
+*제어문*
+if 조건:
+   ...
+elif 조건:
+   ...
+else:
+   ...
+--------------
+i=0                          
+while i<5:
+       print(i) 
+       i=i+1
+
+0
+1
+2
+3
+4
+
+-----------------------
+*Up & Down game*
+
+import random
+
+number = random.randint(0, 20)
+guess = int(input('enter number: '))
+
+while guess != number:
+
+    if number > guess:
+        print('Up')
+
+    elif number < guess:
+        print('Down')
+
+    guess = int(input('enter number: '))
+
+print('맞혔습니다.')
+ ---------------------------------------
+for number in range(50):
+    print(number*2)
+-------------------------------
+names = ['철수', '영희', '민수', '창민']
+heights = [1.80, 1.58, 1.87, 1.69]
+weights = [80, 56, 84, 63]
+
+for i in range(4):
+    name = names[i]
+    t = heights[i]
+    w = weights[i]
+
+    bmi = w / (t**2)
+
+    print('{}의 bmi는 {}입니다.'.format(name, bmi))
+-----------------------------------------------------
+scores = [100, 90, 39, 87, 20, 67, 90, 47]
+sum = 0
+
+for score in scores:
+    sum = sum + score
+
+average = sum / len(scores)
+
+print('평균은 {}입니다.'.format(average))
+-----------------------------------------
+*함수*
+
+def add(a, b):
+    return a + b
+
+c = add(5,10)
+print(c)
+--------------------
+def average(num_list):
+    sum = 0
+    for num in num_list:
+        sum = sum + num
+
+    aver = sum / len(num_list)
+
+    return aver
